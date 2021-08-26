@@ -1,1 +1,1 @@
-{{-- <img src="{{asset('js/app.jpg')}}"> --}}
+<script src="{{asset('website/scripts/js/custom.js')}}"></script>
