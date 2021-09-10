@@ -1,1 +1,0 @@
-<script src="{{asset('website/scripts/js/custom.js')}}"></script>
