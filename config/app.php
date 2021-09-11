@@ -181,6 +181,12 @@ return [
          */
         App\Providers\RepositoryServiceProvider::class,
 
+        /*
+         * Laravel Log Viewer...
+         */
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+
+
     ],
 
     /*
