@@ -14,11 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('vivarttana.index');
 });
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
 Route::get('test',function(){
     return view("test");
+});
+
+Route::get('home',function(){
+    return view("vivarttana.index");
+});
+
+
+Route::get('prasanna',function(){
+    return view("vivarttana.prasanna");
 });
