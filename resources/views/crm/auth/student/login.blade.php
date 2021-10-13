@@ -109,7 +109,4 @@
                     }
             }
         </script>
-</body>
-</html>
-
 @endsection
