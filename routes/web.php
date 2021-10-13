@@ -31,3 +31,18 @@ Route::get('home',function(){
 Route::get('prasanna',function(){
     return view("vivarttana.prasanna");
 });
+
+Route::get('/studentlogin',function()
+{
+    return view('crm.auth.student.login');
+});
+
+Route::get('/studentregister',function()
+{
+    return view('crm.auth.student.register');
+});
+
+Route::get('/dashboard',function()
+{
+    return view('crm.auth.student.dashboard');
+});
