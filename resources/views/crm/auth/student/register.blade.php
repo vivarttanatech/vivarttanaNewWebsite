@@ -58,28 +58,29 @@
         <br>
             <p>USER REGISTRATION FORM</p>
             Please fill in your credentials to continue<br><br>
-            <form class="container" method="get">
+            <form class="container" method="post" action="{{route('crm.student.register')}}">
+                @csrf
                 <div class="form-group">
-                <input type="text" class="form-control" id="user_name" name="full_name" placeholder="Enter Your Name" style="border-color: blue;box-shadow:blue;">
-                <span id="nameerr" class="text-danger"></span>
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="user_name" name="name" placeholder="Enter Your Name" style="border-color: blue;box-shadow:blue;" value="{{ (old('name')) ?  old('name') :''}}">
+                <span class="text-danger">@error('name'){{$message}}@enderror</span>
                 </div>
                 <div class="form-group">
-                <input type="text" class="form-control" id="user_phone" name="phone" placeholder="Enter Your Phone number" maxlength=10 style="border-color: blue;">
-                <span id="phoneerr" class="text-danger"></span>
+                <input type="text" class="form-control @error('phone') is-invalid @enderror" id="user_phone" name="phone" placeholder="Enter Your Phone number" maxlength=10 style="border-color: blue;" value="{{ (old('phone')) ?  old('phone') :''}}">
+                <span class="text-danger">@error('phone'){{$message}}@enderror</span>
                 </div>
                 <div class="form-group">
-                <input type="text" class="form-control" id="user_email" name="email" placeholder="Enter Your Email" style="border-color: blue;box-shadow:blue;">
-                <span id="emailerr" class="text-danger"></span>
+                <input type="text" class="form-control @error('email') is-invalid @enderror" id="user_email" name="email" placeholder="Enter Your Email" style="border-color: blue;box-shadow:blue;" value="{{ (old('email')) ?  old('email') :''}}">
+                <span class="text-danger">@error('email'){{$message}}@enderror</span>
                 </div>
                 <div class="form-group">
-                <input type="password" class="form-control" id="user_pass" name="password" placeholder="Enter Your Password" style="border-color: blue;box-shadow:blue;">
-                <span id="passworderr" class="text-danger"></span>
+                <input type="password" class="form-control @error('password') is-invalid @enderror" id="user_pass" name="password" placeholder="Enter Your Password" style="border-color: blue;box-shadow:blue;">
+                <span class="text-danger">@error('password'){{$message}}@enderror</span>
                 </div>
                 <div class="form-group">
-                <input type="password" class="form-control" id="user_confpass" name="confpassword" placeholder="Confirm Your Password" style="border-color: blue;box-shadow:blue;"><br>
-                <span id="confpassworderr" class="text-danger"></span>
+                <input type="password" class="form-control" id="user_confpass" name="password_confirmation" placeholder="Confirm Your Password" style="border-color: blue;box-shadow:blue;"><br>
+                <span class="text-danger">@error('password_confirmation'){{$message}}@enderror</span>
                 </div>
-                <div class="btn1"><input class="btn1" type="submit" value="Sign Up" onclick="validateForm()"></div>
+                <div class="btn1"><input class="btn1" type="submit" value="Sign Up"></div>
                 Already have an account?<a href="loginform2.php"> Login Instead!</a><br>
             </form>
         </div>

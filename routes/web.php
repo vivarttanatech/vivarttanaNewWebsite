@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthContoller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,15 +33,9 @@ Route::get('prasanna',function(){
     return view("vivarttana.prasanna");
 });
 
-Route::get('/studentlogin',function()
-{
-    return view('crm.auth.student.login');
-});
-
-Route::get('/studentregister',function()
-{
-    return view('crm.auth.student.register');
-});
+Route::get('/student/login',[AuthContoller::class,'studentLoginIndex']);
+Route::get('/student/register',[AuthContoller::class,'studentRegisterIndex']);
+Route::post('/student/register/save',[AuthContoller::class,'studentRegisterSave'])->name('crm.student.register');
 
 Route::get('/dashboard',function()
 {
