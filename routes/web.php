@@ -39,5 +39,5 @@ Route::post('/student/register/save',[AuthContoller::class,'studentRegisterSave'
 
 Route::get('/dashboard',function()
 {
-    return view('crm.auth.student.dashboard');
+    return view('crm.student.home');
 });
