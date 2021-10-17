@@ -9,7 +9,7 @@
     </head>
     <body>
         @yield('content')
-        @include('crm.layout.footerscripts.blade.php')
+        @include('crm.layout.footerscripts')
         @yield('javascript')
     </body>
 </html>
