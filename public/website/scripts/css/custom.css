@@ -1,0 +1,105 @@
+/* Common */
+
+/*5px Padding*/
+.top-space-5{
+    padding-top: 5px;
+}
+
+.bottom-space-5{
+    padding-bottom: 5px;
+}
+
+.right-space-5{
+    padding-right: 5px;
+}
+
+.left-space-5{
+    padding-left: 5px;
+}
+
+
+/* 10px Padding*/
+.top-space-10{
+    padding-top: 10px;
+}
+
+.bottom-space-10{
+    padding-bottom: 10px;
+}
+
+.right-space-10{
+    padding-right: 10px;
+}
+
+.left-space-10{
+    padding-left: 10px;
+}
+
+/* 15px Padding*/
+.top-space-15{
+    padding-top: 15px;
+}
+
+.bottom-space-15{
+    padding-bottom: 15px;
+}
+
+.right-space-15{
+    padding-right: 15px;
+}
+
+.left-space-15{
+    padding-left: 15px;
+}
+
+
+
+/*Login and Register Page*/
+.auth-card-custom{
+    width: 375px !important;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media only screen and (max-width: 600px) {
+    .auth-card-custom{
+        width: 300px !important;
+        position : absolute;
+        top : 50%;
+        left : 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.auth-card-logo-container{
+    display: flex;
+    justify-content: center;
+}
+
+.auth-card-logo{
+    width:120px !important;
+    height:auto;
+}   
+
+.auth-brief-font{
+    font-size: 15px !important;
+}
+
+.auth-btn-full{
+    width: 100px !important;
+}
+
+.auth-link{
+    font-size: 15px !important;
+    text-decoration: none;
+}
+
+.auth-link:hover{
+    color:blue
+}
+
+.auth-link-section{
+    padding-top:20px;
+}

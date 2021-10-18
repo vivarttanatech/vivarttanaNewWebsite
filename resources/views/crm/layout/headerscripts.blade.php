@@ -4,3 +4,4 @@
 <link href="{{asset('vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('vendor/datatables/datatables.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('fontawesome/css/font-awesome.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('website/scripts/css/custom.css')}}" rel="stylesheet" type="text/css">

@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{csrf_token()}}">
         <title>Vivarttana CRM Login | @yield('title')</title>
         @include('crm.layout.headerscripts')
+        @yield('custom_css')
     </head>
     <body>
         @yield('content')

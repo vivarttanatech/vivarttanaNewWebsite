@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthContoller;
+use App\Http\Controllers\CRM\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,12 +33,18 @@ Route::get('home',function(){
 Route::get('prasanna',function(){
     return view("vivarttana.prasanna");
 });
+//Student Auth Routes
+Route::get('/student/login',[AuthContoller::class,'studentLoginIndex'])->name('crm.student.login');
+Route::post('/student/login',[AuthContoller::class,'studentLoginAuthenticate'])->name('crm.student.login.authenticate');
+Route::get('/student/register',[AuthContoller::class,'studentRegisterIndex'])->name('crm.student.register');
+Route::post('/student/register/save',[AuthContoller::class,'studentRegisterSave'])->name('crm.student.register.save');
+//Trainer Auth Routes
+Route::get('/trainer/login',[AuthContoller::class,'trainerLoginIndex']);
+Route::post('/trainer/login',[AuthContoller::class,'trainerLoginAuthenticate']);
+//Admin Auth Routes
+Route::get('/admin/login',[AuthContoller::class,'adminLoginIndex']);
+Route::post('/admin/login',[AuthContoller::class,'adminLoginAuthenticate']);
 
-Route::get('/student/login',[AuthContoller::class,'studentLoginIndex']);
-Route::get('/student/register',[AuthContoller::class,'studentRegisterIndex']);
-Route::post('/student/register/save',[AuthContoller::class,'studentRegisterSave'])->name('crm.student.register');
 
-Route::get('/dashboard',function()
-{
-    return view('crm.student.home');
-});
+//Student Dasbhoard routes
+Route::get('/student/dashboard',[DashboardController::class,'studentDashboardIndex'])->name('name.student.dashboard.index');
