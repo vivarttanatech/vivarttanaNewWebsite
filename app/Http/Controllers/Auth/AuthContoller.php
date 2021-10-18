@@ -79,9 +79,9 @@ class AuthContoller extends Controller
                 $credentials=$request->only('email','password');
                 if(Auth::attempt($credentials)==true){
                         
-                    return redirect()->intended('student/dashboard/');
+                    return redirect()->intended('trainer/dashboard/');
                 }else{
-                    return redirect('student/login')->with('error', 'Ops! Wrong Password/Username');
+                    return redirect('trainer/login')->with('error', 'Ops! Wrong Password/Username');
                 }
             }
         }

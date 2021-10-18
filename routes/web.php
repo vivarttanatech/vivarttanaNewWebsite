@@ -40,10 +40,10 @@ Route::get('/student/register',[AuthContoller::class,'studentRegisterIndex'])->n
 Route::post('/student/register/save',[AuthContoller::class,'studentRegisterSave'])->name('crm.student.register.save');
 //Trainer Auth Routes
 Route::get('/trainer/login',[AuthContoller::class,'trainerLoginIndex']);
-Route::post('/trainer/login',[AuthContoller::class,'trainerLoginAuthenticate']);
+Route::post('/trainer/login',[AuthContoller::class,'trainerLoginAuthenticate'])->name('crm.trainer.login.authenticate');
 //Admin Auth Routes
 Route::get('/admin/login',[AuthContoller::class,'adminLoginIndex']);
-Route::post('/admin/login',[AuthContoller::class,'adminLoginAuthenticate']);
+Route::post('/admin/login',[AuthContoller::class,'adminLoginAuthenticate'])->name('crm.admin.login.authenticate');
 
 
 //Student Dasbhoard routes
