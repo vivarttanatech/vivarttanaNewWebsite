@@ -52,5 +52,5 @@ Route::get('/admin/logout',[AuthContoller::class,'adminDashboardLogout'])->name(
 
 
 //Student Dasbhoard routes
-Route::get('/student/dashboard',[DashboardController::class,'studentDashboardIndex'])->name('name.student.dashboard.index');
-Route::get('/admin/dashboard',[DashboardController::class,'adminDashboardIndex'])->name('crm.admin.dashboard.index');
+Route::get('/student/dashboard',[DashboardController::class,'studentDashboardIndex'])->name('name.student.dashboard.index')->middleware('auth');
+Route::get('/admin/dashboard',[DashboardController::class,'adminDashboardIndex'])->name('crm.admin.dashboard.index')->middleware('auth');
