@@ -1,6 +1,6 @@
 @extends('crm.layout.crmlayout')
 @section('logouturl')
-{{-- <a class="nav-link px-3" href="{{url('/admin/logout')}}">Sign out</a> --}}
+<a class="nav-link px-3" href="{{route('crm.admin.logout')}}">Sign out</a>
 @endsection
 @section('title','Admin Dashboard')
 @section('custom_css')
