@@ -1,4 +1,4 @@
-@extends('crm.layout.authlayout')
+@extends('crm.layout.authLayout')
 @section('title','Student Login')
 @section('custom_css')
 @endsection
