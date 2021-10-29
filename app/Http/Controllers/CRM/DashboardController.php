@@ -10,4 +10,8 @@ class DashboardController extends Controller
     public function studentDashboardIndex(){
         return view('crm.student.dashboard.home');
     }
+
+    public function adminDashboardIndex(){
+        return view('crm.admin.dashboard.home');
+    }
 }
