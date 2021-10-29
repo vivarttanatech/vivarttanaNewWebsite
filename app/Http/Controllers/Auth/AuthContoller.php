@@ -104,5 +104,21 @@ class AuthContoller extends Controller
                 }
             }
         }
+
+        public function adminDashboardLogout(){
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+
+        public function studentDashboardLogout(){
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+
+        public function trainerDashboardLogout(){
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        
         
 }

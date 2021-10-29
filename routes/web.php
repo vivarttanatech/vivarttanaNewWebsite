@@ -45,6 +45,11 @@ Route::post('/trainer/login',[AuthContoller::class,'trainerLoginAuthenticate'])-
 Route::get('/admin/login',[AuthContoller::class,'adminLoginIndex']);
 Route::post('/admin/login',[AuthContoller::class,'adminLoginAuthenticate'])->name('crm.admin.login.authenticate');
 
+//Logout Routes
+Route::get('/student/logout',[AuthContoller::class,'studentDashboardLogout'])->name('crm.student.logout');
+Route::get('/trainer/logout',[AuthContoller::class,'trainerDashboardLogout'])->name('crm.trainer.logout');
+Route::get('/admin/logout',[AuthContoller::class,'adminDashboardLogout'])->name('crm.admin.logout');
+
 
 //Student Dasbhoard routes
 Route::get('/student/dashboard',[DashboardController::class,'studentDashboardIndex'])->name('name.student.dashboard.index');
