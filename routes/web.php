@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\AuthContoller;
 use App\Http\Controllers\CRM\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,21 +34,21 @@ Route::get('prasanna',function(){
     return view("vivarttana.prasanna");
 });
 //Student Auth Routes
-Route::get('/student/login',[AuthController::class,'studentLoginIndex'])->name('crm.student.login');
-Route::post('/student/login',[AuthController::class,'studentLoginAuthenticate'])->name('crm.student.login.authenticate');
-Route::get('/student/register',[AuthController::class,'studentRegisterIndex'])->name('crm.student.register');
-Route::post('/student/register/save',[AuthController::class,'studentRegisterSave'])->name('crm.student.register.save');
+Route::get('/student/login',[AuthContoller::class,'studentLoginIndex'])->name('crm.student.login');
+Route::post('/student/login',[AuthContoller::class,'studentLoginAuthenticate'])->name('crm.student.login.authenticate');
+Route::get('/student/register',[AuthContoller::class,'studentRegisterIndex'])->name('crm.student.register');
+Route::post('/student/register/save',[AuthContoller::class,'studentRegisterSave'])->name('crm.student.register.save');
 //Trainer Auth Routes
-Route::get('/trainer/login',[AuthController::class,'trainerLoginIndex']);
-Route::post('/trainer/login',[AuthController::class,'trainerLoginAuthenticate'])->name('crm.trainer.login.authenticate');
+Route::get('/trainer/login',[AuthContoller::class,'trainerLoginIndex']);
+Route::post('/trainer/login',[AuthContoller::class,'trainerLoginAuthenticate'])->name('crm.trainer.login.authenticate');
 //Admin Auth Routes
-Route::get('/admin/login',[AuthController::class,'adminLoginIndex']);
-Route::post('/admin/login',[AuthController::class,'adminLoginAuthenticate'])->name('crm.admin.login.authenticate');
+Route::get('/admin/login',[AuthContoller::class,'adminLoginIndex']);
+Route::post('/admin/login',[AuthContoller::class,'adminLoginAuthenticate'])->name('crm.admin.login.authenticate');
 
 //Logout Routes
-Route::get('/student/logout',[AuthController::class,'studentDashboardLogout'])->name('crm.student.logout');
-Route::get('/trainer/logout',[AuthController::class,'trainerDashboardLogout'])->name('crm.trainer.logout');
-Route::get('/admin/logout',[AuthController::class,'adminDashboardLogout'])->name('crm.admin.logout');
+Route::get('/student/logout',[AuthContoller::class,'studentDashboardLogout'])->name('crm.student.logout');
+Route::get('/trainer/logout',[AuthContoller::class,'trainerDashboardLogout'])->name('crm.trainer.logout');
+Route::get('/admin/logout',[AuthContoller::class,'adminDashboardLogout'])->name('crm.admin.logout');
 
 
 //Student Dasbhoard routes
