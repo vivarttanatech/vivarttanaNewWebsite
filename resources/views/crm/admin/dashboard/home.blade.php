@@ -5,9 +5,8 @@
 @endsection
 @section('title','Admin Dashboard')
 @section('custom_css')
+    @yield('dashboard_custom_css')
 @endsection
 @section('content')
-    <div class="">
-       
-    </div>
+    @yield('dashboard_content')
 @endsection
