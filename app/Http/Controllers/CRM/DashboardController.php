@@ -15,7 +15,9 @@ class DashboardController extends Controller
         return view('crm.admin.dashboard.home');
     }
 
-    public function ClassListing(){}
+    public function ClassListing(){
+        return view('crm.admin.classes.ClassListingView');
+    }
     public function ClassAdd(){}
     public function ClassSave(){}
     public function ClassEdit(){}
