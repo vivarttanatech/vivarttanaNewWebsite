@@ -10,3 +10,6 @@
 @section('content')
     @yield('dashboard_content')
 @endsection
+@section('javascript')
+    @yield('dashboard_custom_javascript')
+@endsection

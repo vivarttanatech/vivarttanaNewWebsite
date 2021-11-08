@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthContoller;
 use App\Http\Controllers\CRM\DashboardController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\StudentController;
 
 /*
 |--------------------------------------------------------------------------
