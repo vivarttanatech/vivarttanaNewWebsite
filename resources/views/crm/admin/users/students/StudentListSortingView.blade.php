@@ -7,7 +7,15 @@
         <td>{{$data->phone_no}}</td>
         <td>{{$data->email}}</td>
         <td>{{$data->created_at}}</td>
-        <td>{{$data->id}}</td>
+        <td>
+            <div class="dropdown">
+                <span class="fa fa-bars dropdown"></span>
+                <div class="dropdown-content">
+                    <a href="{{route('crm.admin.user.student.edit',$data->id)}}"><span class="fa fa-pencil-square-o"></span>&nbsp;Edit</a>
+                    <a href="{{route('crm.admin.user.student.delete',$data->id)}}"><span class="fa fa-trash"></span>&nbsp;Delete</a>
+                </div>
+            </div>
+        </td>
     </tr>
     @php $i++; @endphp
     @endforeach

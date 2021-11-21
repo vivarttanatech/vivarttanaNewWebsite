@@ -18,7 +18,11 @@ class StudentController extends Controller
         return view('crm.admin.users.students.StudentManageView');
     }
     public function StudentSave(){}
-    public function StudentEdit(){}
+    public function StudentEdit($student_id){
+        $StudentData = User::where('id',$student_id)->first();
+        //dd($StudentData);
+        return view('crm.admin.users.students.StudentManageView',$StudentData);
+    }
     public function StudentUpdate(){}
     public function StudentDelete(){}
 }
